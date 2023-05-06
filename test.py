@@ -247,7 +247,6 @@ if __name__ == "__main__":
 
         core = ov.Core()
         model = core.read_model(args.trained_model)
-        model.reshape((1, 3, args.canvas_size, args.canvas_size))
 
         net = core.compile_model(args.trained_model, "CPU")
         refine_net = None
@@ -337,7 +336,5 @@ if __name__ == "__main__":
         file_utils.saveResult(
             image_path, image[:, :, ::-1], polys, dirname=result_folder
         )
-
-        break
 
     print("elapsed time : {}s".format(time.time() - t))
