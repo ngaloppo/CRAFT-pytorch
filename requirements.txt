@@ -3,3 +3,4 @@ torchvision
 opencv-python
 scikit-image
 scipy
+openvino-dev[pytorch,onnx]
